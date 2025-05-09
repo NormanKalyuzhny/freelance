@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  --font-color:hsl(18, 44%, 78%);
+  --secondary-color:hsl(18, 68%, 59%);
+  --tag-color: #5A2A27;
+  --bg-gradient: 180deg,rgba(0, 0, 0, 1) 0%, rgba(237, 221, 83, 0) 48%;
+  --bg-color: hsl(18, 49%, 7%);
+}
+
+body{
+  margin: 0; 
+  padding: 0;
+  font-family: sans-serif;
+  line-height: 1.5;
+  color:var(--font-color);
+  background: var(--bg-color);
+  overflow-x: hidden;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis:not(.lenis-autoToggle).lenis-stopped {
+  overflow: clip;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+.lenis.lenis-autoToggle {
+  transition-property: overflow;
+  transition-duration: 1ms;
+  transition-behavior: allow-discrete;
+}
+
+.bgGradient{
+  background: linear-gradient(180deg,#030001 0%, #030001 20%, var(--bg-color) 65%);
+}

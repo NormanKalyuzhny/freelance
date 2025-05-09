@@ -1,0 +1,48 @@
+:root{
+  --animation-speed: 51s;
+  --circle-size: 600px;
+}
+
+.circles-container{
+  transform-style: preserve-3d;
+  perspective: 200%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem;
+  border: 1px solid hsl(18, 44%, 78%);
+  border-radius: 100%;
+  animation: spin var(--animation-speed) infinite ease-in-out, 
+  colorChange var(--animation-speed) infinite ease-in-out;
+}
+
+@media screen and (max-width:630px) {
+  .circles-container{
+     padding: calc(1px + 1.5vw)
+  }
+}
+
+@keyframes colorChange {
+  0%{
+    border-color:hsl(18, 44%, 78%);
+  }
+  50%{
+    border-color:hsl(0, 100%, 62%);
+  }
+  100%{
+    border-color:hsl(18, 44%, 78%);
+  }
+}
+
+@keyframes spin {
+  0%{
+      transform: rotateX(0) rotateY(0);
+  }
+  50%{
+      transform: rotateX(360deg) rotateY(0) rotateZ(360deg);
+  }
+  100%{
+      transform: rotateX(0) rotateY(0);
+  }
+}
+
