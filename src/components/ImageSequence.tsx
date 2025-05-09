@@ -1,6 +1,6 @@
 import { useMotionValueEvent, useScroll, useTransform } from 'framer-motion';
 import { Dispatch, SetStateAction, useCallback, useEffect, useRef } from 'react';
-import Lenis from 'lenis';
+import Lenis from 'Lenis';
 
 type imagesLoadedProp = {
   imagesLoaded: boolean;
