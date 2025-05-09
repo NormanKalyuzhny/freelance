@@ -20,7 +20,7 @@ function ImageSequence({imagesLoaded,images}:imagesLoadedProp) {
   // Lenis smooth scroll
   useEffect(() => {
     const lenis = new Lenis();
-    function raf(time: any) {
+    function raf(time: DOMHighResTimeStamp) {
       lenis.raf(time);
       requestAnimationFrame(raf);
     }
@@ -46,7 +46,7 @@ function ImageSequence({imagesLoaded,images}:imagesLoadedProp) {
   // transforming scrollYProgress into images index
   const currentIndex = useTransform(scrollYProgress, [0, 1], [1, images.length + 20]);
 
-  useMotionValueEvent(currentIndex, 'change', (latest) => {
+  useMotionValueEvent(currentIndex, 'change', (latest:number) => {
     const roundedIndex = Math.round(latest);
     render(roundedIndex);
   });
