@@ -25,8 +25,8 @@ function MainPage() {
     <main ref={container} className="mainContainer relative">
       <div className="relative">
         <div className="bgGradient absolute inset-0 -z-1"></div> 
-        <div className="flex flex-col items-center">
-          <div className="max-[570px]:scale-85 max-[480px]:mb-16 max-[480px]:scale-85 transition-scale duration-300 mt-10 h-22">
+        <div className="@container flex flex-col items-center">
+          <div className=" @max-[550px]:scale-90 max-[480px]:mb-16 transition-scale duration-300 mt-10 h-22">
             <NameSvg/>
           </div>
         </div>
